@@ -133,7 +133,7 @@ const requestOptions = {
 const ulService = document.querySelectorAll("ul")[6];
 console.log(ulService);
 
-fetch("https://barberbackend-production.up.railway.app/api/servicios?populate=*", requestOptions)
+fetch("https://barberbackend.onrender.com/api/servicios?populate=*", requestOptions)
 //fetch("http://localhost:1337/api/servicios?populate=*", requestOptions)
   .then((response) => response.json())
   .then((result) => {
@@ -243,7 +243,7 @@ form.addEventListener("submit", (e) => {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ data: data }),
   };
-  fetch("https://barberbackend-production.up.railway.app/api/citas", requestOptions)
+  fetch("https://barberbackend.onrender.com/api/citas", requestOptions)
   //fetch("http://localhost:1337/api/citas", requestOptions)
     .then((response) => response.json())
     .then((result) => {
@@ -267,7 +267,7 @@ formEmail.addEventListener("submit", (e) => {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ data: data }),
   };
-  fetch("https://barberbackend-production.up.railway.app/api/correos", requestOptions)
+  fetch("https://barberbackend.onrender.com/api/correos", requestOptions)
   //fetch("http://localhost:1337/api/correos", requestOptions)
     .then((response) => response.json())
     .then((result) => {

@@ -133,7 +133,7 @@ const requestOptions = {
 const ulService = document.querySelectorAll("ul")[6];
 console.log(ulService);
 
-fetch("https://barberbackend-production.up.railway.app/api/servicios?populate=*", requestOptions)
+fetch("https://barberbackend.onrender.com/api/servicios?populate=*", requestOptions)
   .then((response) => response.json())
   .then((result) => {
     console.log(result.data);
@@ -242,7 +242,7 @@ form.addEventListener("submit", (e) => {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ data: data }),
   };
-  fetch("https://barberbackend-production.up.railway.app/api/citas", requestOptions)
+  fetch("https://barberbackend.onrender.com/api/citas", requestOptions)
     .then((response) => response.json())
     .then((result) => {
       alert("Cita agendada con exito");
@@ -265,7 +265,7 @@ formEmail.addEventListener("submit", (e) => {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ data: data }),
   };
-  fetch("https://barberbackend-production.up.railway.app/api/correos", requestOptions)
+  fetch("https://barberbackend.onrender.com/api/correos", requestOptions)
     .then((response) => response.json())
     .then((result) => {
       alert("Cita agendada con exito");
